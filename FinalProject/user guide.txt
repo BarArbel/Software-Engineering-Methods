@@ -1,0 +1,128 @@
+All of the controls must be included in a panel.
+The location of every control is calculated in relation to the position of the panel it is inside of.
+
+in order to add items to the lists of ComboBox, CheckList and RadioBox you need to use the method addToList wich receives a string to set for the item.
+for example:
+ComboBox CB(40, 10, sb, Color::White, Color::Cyan);
+CB.addToList("one");
+
+Button:
+Button(short left, short top, short width, Border* border, Color textColor, Color backgroundColor, string Value)
+
+left - x value of top left corner.
+top - y value of the top left corner.
+width - the width value (length between top left corner and top right corner).
+border - the desired border implementation (DoubleBorder, SingleBorder or NullBorder).
+textColor - the color of the foreground.
+backgroundColor - the color of the background.
+Value - the string the button will display.
+
+the height is automaticaly set to 1.
+
+
+Check List:
+CheckList(short left, short top, short width, Border* border, Color textColor, Color backgroundColor)
+
+left - x value of top left corner.
+top - y value of the top left corner.
+width - the width value (length between top left corner and top right corner).
+border - the desired border implementation for the CheckList (DoubleBorder, SingleBorder or NullBorder).
+textColor - the color of the foreground.
+backgroundColor - the color of the background.
+
+the height is automaticaly calculated based on the number of items in the list.
+
+
+Combo Box:
+ComboBox(short left, short top, Border* border, Color textColor, Color backgroundColor)
+
+left - x value of top left corner.
+top - y value of the top left corner.
+border - the desired border implementation (DoubleBorder, SingleBorder or NullBorder).
+textColor - the color of the foreground.
+backgroundColor - the color of the background.
+
+the width and height is automaticaly calculated based on the number of items in the list.
+
+
+Label:
+Label(short left, short top, short width, Border* border, Color textColor, Color backgroundColor, string value)
+
+left - x value of top left corner.
+top - y value of the top left corner.
+width - the width value (length between top left corner and top right corner).
+border - the desired border implementation (DoubleBorder, SingleBorder or NullBorder).
+textColor - the color of the foreground.
+backgroundColor - the color of the background.
+value - the string the label will display.
+
+the height is automaticaly set to 1.
+
+
+Message Box:
+semMessageBox(short left, short top, short width, Border* border, Color textColor, Color backgroundColor, string message, string ok, string cancel, Button* showButton)
+
+left - x value of top left corner.
+top - y value of the top left corner.
+width - the width value (length between top left corner and top right corner).
+border - the desired border implementation (DoubleBorder, SingleBorder or NullBorder).
+textColor - the color of the foreground.
+backgroundColor - the color of the background.
+message - the string the message box will display.
+ok - the string the ok button will display.
+cancel - the string the cancel button will display.
+showButton - a pointer to a button that will activate the message box upon being clicked.
+
+the height is automaticaly set.
+
+
+Numeric Box:
+NumericBox(short left, short top, int maxVal, int minVal, Border* border, Color textColor, Color backgroundColor)
+
+left - x value of top left corner.
+top - y value of the top left corner.
+maxVal - the maximum value the numeric box can receive \ display.
+minVal - the minimum value the numeric box can receive \ display.
+border - the desired border implementation (DoubleBorder, SingleBorder or NullBorder).
+textColor - the color of the foreground.
+backgroundColor - the color of the background.
+
+the height and width are automaticaly set.
+
+
+Panel:
+Panel(short left, short top, Border* border, Color textColor, Color backgroundColor)
+
+left - x value of top left corner.
+top - y value of the top left corner.
+border - the desired border implementation (DoubleBorder, SingleBorder or NullBorder).
+textColor - the color of the foreground.
+backgroundColor - the color of the background.
+
+the height and width are calculated based on the position and the height \ width of the controls in the panel.
+
+
+Radio Box:
+RadioBox(short left, short top, short width, Border* border, Color textColor, Color backgroundColor)
+
+left - x value of top left corner.
+top - y value of the top left corner.
+width - the width value (length between top left corner and top right corner).
+border - the desired border implementation (DoubleBorder, SingleBorder or NullBorder).
+textColor - the color of the foreground.
+backgroundColor - the color of the background.
+
+the height is automaticaly calculated based on the number of items in the list.
+
+
+TextBox:
+TextBox(short left, short top, short width, Border* border, Color textColor, Color backgroundColor)
+
+left - x value of top left corner.
+top - y value of the top left corner.
+width - the width value (length between top left corner and top right corner).
+border - the desired border implementation (DoubleBorder, SingleBorder or NullBorder).
+textColor - the color of the foreground.
+backgroundColor - the color of the background.
+
+the height is automaticaly set to 1.
