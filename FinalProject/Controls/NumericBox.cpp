@@ -7,8 +7,25 @@ NumericBox::NumericBox(short left, short top, int maxVal, int minVal, Border* bo
     subtract(left + 12, top + 1, 1, new SingleBorder(), textColor, backgroundColor, " -"),
     maxVal(maxVal), minVal(minVal)
 {
+    int newWidth = 0, temp = 0;
     add.addListener(this);
     subtract.addListener(this);
+
+    if(minVal < 0){
+        temp = -minVal;
+        if(temp < maxVal)
+            temp = maxVal;
+    }
+    else temp = maxVal;
+
+    while(temp){
+        ++newWidth;
+        temp /= 10;
+    }
+
+    value.setWidth(newWidth);
+    subtract.setLeft(newWidth + left + 11);
+    setWidth(getWidth() + newWidth -1);
 }
 
 

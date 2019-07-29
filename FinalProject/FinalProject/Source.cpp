@@ -37,7 +37,7 @@ int main(int argc, char** argv)
 	RB.addToList("asdf");
 	RB.addToList("zxcv");
 	Label L(0, 15, 10, nb, Color::White, Color::Black, "Such WOW");
-	NumericBox NB(50, 5, 10, 0, sb, Color::White, Color::Black);
+	NumericBox NB(50, 5, 50, -1000, sb, Color::White, Color::Black);
 
 	P.addControl(&B);
 	P.addControl(&MB);
