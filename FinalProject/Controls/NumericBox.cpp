@@ -85,14 +85,14 @@ void NumericBox::draw(Graphics& g, int x, int y, size_t z){
 
         relativeX = value.getLeft();
         relativeY = value.getTop();
-        value.draw(g, relativeX, relativeY, z);
+        value.draw(g, relativeX + 1, relativeY + 1, z);
 
         relativeX = add.getLeft();
         relativeY = add.getTop();
-        add.draw(g, relativeX, relativeY, z);
+        add.draw(g, relativeX + 1, relativeY + 1, z);
 
         relativeX = subtract.getLeft();
         relativeY = subtract.getTop();
-        subtract.draw(g, relativeX, relativeY, z);
+        subtract.draw(g, relativeX + 1, relativeY + 1, z);
     }
 }
